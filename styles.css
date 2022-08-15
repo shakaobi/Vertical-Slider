@@ -1,0 +1,90 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;   
+
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  height: 100vh;
+  
+}
+.slider-container {/*wrapps all the divs*/ 
+    position: relative;
+    overflow: hidden;
+    width: 100vw;/*makes sure the picture fills the screen in width and height */
+    height: 100vh;
+}
+.left-slide {
+    height: 100%;
+    width: 35%;
+    position: absolute;
+    top: 0;
+    left: 0;/*allows a smooth transition*/
+    transition: transform 0.5s ease-in-out;
+}
+.left-slide > div {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /*the words dissapear when using flex*/
+    color: #fff;
+}/*this allows the information to be cetered */
+.left-slide h1{
+    font-size: 40px;
+    margin-bottom: 10px;
+    margin-top: -30px;
+}
+.right-slide {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 35%;
+    width: 65%;
+    transition: transform 0.5s ease-in-out;
+}/*smoothness of the picture sliding (transform)*/
+.right-slide > div {/*shows the image */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: center center;/*shows the image on x/y axis */
+    height: 100%;
+    width: 100%;
+}
+.button {
+    background-color: #fff;
+    border: none;
+    color: #aaa;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 15px;
+}
+button:hover {
+    background-color: #00ffff;
+    color: #222;    
+}
+button:focus {
+    outline: none;
+}
+
+.slider-container .action-buttons button {
+    position: absolute;
+    left: 35%;
+    top: 50%; /*buttons in the middle*/
+    z-index: 100; /*buttons always on top */
+}
+.slider-container .action-buttons .down-button {/*left button*/
+    transform: translateX(-100%);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}/*positioning the button to the left(use negative)*/
+.slider-container .action-buttons .up-button {/*right button*/
+    transform: translateY(-100%);
+    border-top-right-radius: 5px;/*round the corners or arrows*/
+    border-bottom-right-radius: 5px;
+}/*positioning the button pointing to the ceiling(use negative)*/

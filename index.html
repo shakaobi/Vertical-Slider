@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <link rel="stylesheet" href="styles.css" /><!links for the arrow buttons-->
+    <title>Vertical Slider</title>
+  </head><!creating the classes for sliders-->
+  <body>
+    <div class="slider-container">
+        <div class="left-slide">
+            <div style="background-color: #ffd900">
+                <h1>Daisy</h1>
+                <p>Enjoy a field of daisies</p>
+            </div>
+            <div style="background-color: #088F8F">
+                <h1>Lagoon</h1>
+                <p>Lagoons and limestone cliffs</p>
+            </div>
+            <div style="background-color: #556b2f">
+                <h1>Amazon</h1>
+                <p>Beautiful rolling hills</p>
+            </div>
+            <div style="background-color: #ff00d9">
+                <h1>Salt</h1>
+                <p>Pink Lake in France</p>
+            </div>
+        </div>
+        <div class="right-slide">
+            <div style="background-image: url(/static/Pinklake.jpg)"></div>
+            <div style="background-image: url(/static/Rollinghills.jpg)"></div>
+            <div style="background-image: url(/static/Lagoon.jpg)"></div>
+            <div style="background-image: url(/static/Yellowflowers.jpg)"></div>
+        </div>
+        <div class="action-buttons">
+            <button class="down-button">
+                <i class="fas fa-arrow-down"></i>
+            </button>
+            <button class="up-button">
+                <i class="fas fa-arrow-up"></i>
+            </button>
+        </div>  
+    </div>
+    <script src="slider.js"></script>
+  </body>
+</html>
